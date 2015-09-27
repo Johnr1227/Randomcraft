@@ -1,0 +1,10 @@
+{
+  "PVZ": {
+    "category": "master",
+    "sounds": ["PVZ"]
+  },  
+    "DORA": {
+    "category": "master",
+    "sounds": ["DORA"]
+  }
+}

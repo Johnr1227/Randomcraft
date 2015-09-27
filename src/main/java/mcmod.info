@@ -1,0 +1,16 @@
+[
+{
+  "CoolMod": "CoolMod",
+  "name": "CoolMod",
+  "description": "Example placeholder CoolMod.",
+  "version": "${version}",
+  "1.7.10": "${1.7.10}",
+  "?": "",
+  "updateUrl": "?",
+  "authorList": ["JOHN RUED"],
+  "credits": "MEEEEEEE",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
