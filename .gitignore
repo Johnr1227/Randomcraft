@@ -1,0 +1,5 @@
+eclipse
+.gradle
+.classpath
+bin
+.settings
