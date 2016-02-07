@@ -124,7 +124,7 @@ public class CHEESE_TNT extends Block {
 						(double) ((float) p_150114_2_ + 0.5F), (double) ((float) p_150114_3_ + 0.5F),
 						(double) ((float) p_150114_4_ + 0.5F), p_150114_6_);
 				p_150114_1_.spawnEntityInWorld(EntityCheeseTNT);
-				p_150114_1_.playSoundAtEntity(EntityCheeseTNT, "game.tnt.primed", 1.0F, 1.0F);
+				p_150114_1_.playSoundAtEntity(EntityCheeseTNT, "cm:SHUT_UPP", 1.0F, 1.0F);
 			}
 		}
 	}

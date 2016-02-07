@@ -36,7 +36,7 @@ public class FlamingPigs implements ICommand {
 	// This is called execute() in Forge 1.8
 	public void processCommand(ICommandSender sender, String[] args) {
 		if (args.length != 1) {
-			sendErrorMessage(sender, "Invalid number of arguments!!!!!!! :D");
+			sendErrorMessage(sender, "§lInvalid number of arguments!!!!!!! :D");
 			return;
 		}
 		try {

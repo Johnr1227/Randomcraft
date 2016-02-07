@@ -3,8 +3,17 @@
     "category": "master",
     "sounds": ["PVZ"]
   },  
-    "DORA": {
+    "Hallelujah": {
     "category": "master",
-    "sounds": ["DORA"]
-  }
+    "sounds": ["Hallelujah"]
+  },
+    
+    "SHUT_UPP": {
+    "category": "master",
+    "sounds": ["SHUT_UPP"]
+  },
+    "SUZY": {
+    "category": "master",
+    "sounds": ["SUZY"]
+  } 
 }

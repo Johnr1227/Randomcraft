@@ -14,6 +14,7 @@ public class Alex extends Block{
 
 protected Alex(Material REDSTONE) {
 		super(REDSTONE);
+		// Alex?
 		// TODO Auto-generated constructor stub
 	}
 

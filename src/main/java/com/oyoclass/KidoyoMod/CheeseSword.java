@@ -25,7 +25,7 @@ public class CheeseSword extends ItemSword {
 		super(cheese);
 		this.weaponDamage = 1000000000;
 
-		// TODO Auto-generated constructor stub
+		
 		this.setCreativeTab(CoolMod.Random_stuff);
 
 	}
@@ -71,8 +71,8 @@ public class CheeseSword extends ItemSword {
 
 			float soundVolume = 10000.0f;
 			float soundSpeed = 1.0f;
-			//soundListener.stopAllRecentDoraSounds();
-		    world.playSoundAtEntity(entity, "cm:DORA", soundVolume, soundSpeed);
+			soundListener.stopAllRecentDoraSounds();
+		    world.playSoundAtEntity(entity, "cm:Hallelujah", soundVolume, soundSpeed);
 		}
 		isEquipped = newEquipped;
 		currentItemWasCheeseSword = currentItemIsCheeseSword;
@@ -88,19 +88,19 @@ public class CheeseSword extends ItemSword {
 			lastSoundEvents = new LinkedList<PlaySoundEvent17>();
 			if (soundEventsToStop != null) {
 				for (PlaySoundEvent17 eventToStop : soundEventsToStop) {
-					System.out.println("Stopping the sound: " + eventToStop.sound);
+				//	System.out.println("Stopping the sound: " + eventToStop.sound);
 					eventToStop.manager.stopSound(eventToStop.sound);
 				}
 			} else {
-				System.out.println("No Sound to stop!");
+				//System.out.println("No Sound to stop!");
 			}
 		}
 
 		@SubscribeEvent
 		public void soundStartedPlaying(PlaySoundEvent17 soundEvent) {
-			System.out.println("Sound started: " + soundEvent.name);
-			if (soundEvent.name.equals("DORA")) {
-				System.out.println("DORA STARTED!!!!");
+			//System.out.println("Sound started: " + soundEvent.name);
+			if (soundEvent.name.equals("Hallelujah")) {
+			
 				this.lastSoundEvents.add(soundEvent);
 			}
 		}
@@ -109,6 +109,11 @@ public class CheeseSword extends ItemSword {
 	public static SoundListener getSoundListener() {
 		return soundListener;
 	}
+	
+	public boolean hasEffect(ItemStack par1ItemStack, int pass) {
+		// This means it will look "special" in the inventory
+		return true;
 
-}
+}}
 // ItemBow
+// ItemPotion

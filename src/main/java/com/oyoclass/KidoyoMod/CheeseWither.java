@@ -19,6 +19,7 @@ import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.ai.attributes.ModifiableAttributeInstance;
 import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.boss.IBossDisplayData;
 import net.minecraft.entity.monster.EntityMob;
@@ -42,7 +43,7 @@ public class CheeseWither extends EntityMob implements IBossDisplayData, IRanged
 	public static final int EGG_COLOR = 0xE68A00;
 	public static final int SPOT_COLOR = 0xFF6600;
 	public static final float HEALTH = 100000000000f;
-
+	
 	public static void register() {
 		int randomId = EntityRegistry.findGlobalUniqueEntityId();
 		EntityRegistry.registerGlobalEntityID(ENTITY_CLASS, "Cheese Wither", randomId);
@@ -76,24 +77,23 @@ public class CheeseWither extends EntityMob implements IBossDisplayData, IRanged
 	public CheeseWither(World world) {
 		super(world);
 		this.setHealth(HEALTH);
-		this.setSize(1F, 2.3F);
-		this.setAIMoveSpeed(100.0F);
+		this.setAIMoveSpeed(1.7F);
 		this.isImmuneToFire = true;
 		this.getNavigator().setCanSwim(true);
 		this.tasks.addTask(0, new EntityAIWander(this, 1.0D)); // 15D
 //		this.tasks.addTask(1, new EntityAISwimming(this));
-		this.tasks.addTask(2, new EntityAIArrowAttack(this, 1.0D, 40, 20.0F));
+//		this.tasks.addTask(2, new EntityAIArrowAttack(this, 1.0D, 40, 20.0F));
 //		this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
 //		this.tasks.addTask(4, new EntityAILookIdle(this));
 //		this.targetTasks.addTask(0, new EntityAIHurtByTarget(this, false));
-		this.setSize(1.0F, 2.3F);
+		this.setSize(2.0F, 4.0F);
 //		this.tasks.addTask(5, new EntityAIArrowAttack(this, 1.0D, 40, 20.0F));
 		this.eatGrassBonus();
 		this.getShadowSize();
 		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityLiving.class, 0, false, false,
 				attackEntitySelector));
-		this.experienceValue = 1000000;
+		this.experienceValue = 150000;
 	}
 
 	@Override
@@ -101,7 +101,10 @@ public class CheeseWither extends EntityMob implements IBossDisplayData, IRanged
 		// TODO Auto-generated method stub
 		super.applyEntityAttributes();
 		getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(9999999999999999D);
+		getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(1000);
+		getEntityAttribute(SharedMonsterAttributes.knockbackResistance).setBaseValue(100);
 	}
+	
 
 	{
 		this.dropItem(CoolMod.itemCheeese, 15);
@@ -201,6 +204,9 @@ public class CheeseWither extends EntityMob implements IBossDisplayData, IRanged
 			float f1 = MathHelper.sin(f);
 			return this.posZ + (double) f1 * 1.3D;
 		}
+		
+	
+		
 		
 	}
 }

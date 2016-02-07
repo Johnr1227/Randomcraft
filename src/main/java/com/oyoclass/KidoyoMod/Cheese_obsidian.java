@@ -18,7 +18,7 @@ public class Cheese_obsidian extends BlockStone {
 	    	//this.slipperiness = 4;
 	    	this.slipperiness = 0.98F;
 			// TODO Auto-generated constructor stub
-	    	this.setStepSound(soundTypeAnvil);
+	    	this.setStepSound(soundTypeStone);
 		}
 
 		/**
@@ -38,7 +38,7 @@ public class Cheese_obsidian extends BlockStone {
 	    }
 	    {
 	    this.setCreativeTab(CoolMod.Random_stuff);
-	    this.setHardness(100);
+	    this.setHardness(500);
 	    
 
 

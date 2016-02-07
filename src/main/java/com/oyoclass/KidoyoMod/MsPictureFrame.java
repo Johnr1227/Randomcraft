@@ -2,7 +2,6 @@ package com.oyoclass.KidoyoMod;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 
 public class MsPictureFrame extends Block {
 

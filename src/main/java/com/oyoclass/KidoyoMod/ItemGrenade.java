@@ -44,8 +44,7 @@ public class ItemGrenade extends Item {
 	/**
 	 * Render Pass sensitive version of hasEffect()
 	 */
-	public boolean hasEffect(ItemStack par1ItemStack, int pass) {
-		// This means it will look "special" in the inventory
-		return true;
+	//public boolean hasEffect(ItemStack par1ItemStack, int pass) {
+		// This means it will look "enchanted" in the inventory
+	//	return true;
 	}
-}

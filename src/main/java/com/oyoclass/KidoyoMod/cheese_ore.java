@@ -14,8 +14,11 @@ public class cheese_ore extends Block {
 		super(p_i45394_1_);
 
 		// this.setCreativeTab(CreativeTabs.tabBlock);
-		this.setHardness(7);
+		this.setHardness(175);
 		this.setCreativeTab(CoolMod.Random_stuff);
+		this.setStepSound(soundTypeStone);
+		
+		
 
 	}
 }

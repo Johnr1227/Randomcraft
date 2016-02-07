@@ -79,22 +79,15 @@ public class EntityCheeseTNT extends Entity {
 			if (!this.worldObj.isRemote) {
 				this.explode();
 			}
-			this.fuse = 80;
-			if (!this.worldObj.isRemote) {
-				this.explode();
-			}
-			this.fuse = 80;
-			if (!this.worldObj.isRemote) {
-				this.explode();
-			}
-			this.setDead();
+			//this.setDead();
+			
 		} else {
 			this.worldObj.spawnParticle("smoke", this.posX, this.posY + 0.5D, this.posZ, 0.0D, 0.0D, 0.0D);
 		}
 	}
 
 	private void explode() {
-		float f = 750.3F;
+		float f = 750.5F;
 		this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, f, true);
 	}
 
